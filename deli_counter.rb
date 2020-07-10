@@ -15,11 +15,11 @@ def line(katz_deli)
   end
 end
 #calls out (i.e. puts) the person's name along with their position in line
-def take_a_number(katz_deli, name)
-  katz_deli << name
-  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
-end
-#calls out (puts) the next person in line and then remove them from the front
+#def take_a_number(katz_deli, name)
+#  katz_deli << name
+#  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+#end
+#calls out (puts) the next person in line and then removes them from the front
 def now_serving(katz_deli)
   if katz_deli.empty?
     puts "There is nobody waiting to be served!"
@@ -27,3 +27,12 @@ def now_serving(katz_deli)
     puts "Currently serving #{katz_deli.shift}."
   end
 end
+
+$customer = 1
+def take_a_number
+  puts "Order number: #{$customer}"
+  $customer += 1
+end
+puts take_a_number
+puts take_a_number
+puts take_a_number
